@@ -1,6 +1,5 @@
-package com.itman.springcloud.worker.entity;
+package com.itman.springcloud.reg.worker.entity;
 
-import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

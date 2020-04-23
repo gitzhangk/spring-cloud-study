@@ -1,8 +1,10 @@
-package com.itman.springcloud.worker.controller;
+package com.itman.springcloud.reg.worker.controller;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSON;
-import com.itman.springcloud.worker.entity.Worker;
-import com.itman.springcloud.worker.service.WorkerService;
+import com.itman.springclou.entity.register.worker.WorkerFeignDTO;
+import com.itman.springcloud.reg.worker.entity.Worker;
+import com.itman.springcloud.reg.worker.service.WorkerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,9 +23,11 @@ public class WorkerController
     private final WorkerService workerService;
 
     @GetMapping("/findById/{id}")
-    public String findById(@PathVariable("id") String id)
+    public WorkerFeignDTO findById(@PathVariable("id") String id)
     {
         Worker worker = workerService.findById(id);
-       return JSON.toJSONString(worker);
+        WorkerFeignDTO workerFeign = new WorkerFeignDTO();
+        BeanUtil.copyProperties(worker,workerFeign);
+       return workerFeign;
     }
 }

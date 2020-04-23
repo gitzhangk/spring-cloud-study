@@ -1,7 +1,7 @@
-package com.itman.springcloud.worker.service.impl;
+package com.itman.springcloud.reg.worker.service.impl;
 
-import com.itman.springcloud.worker.entity.Worker;
-import com.itman.springcloud.worker.service.WorkerService;
+import com.itman.springcloud.reg.worker.entity.Worker;
+import com.itman.springcloud.reg.worker.service.WorkerService;
 import org.springframework.stereotype.Service;
 
 /**

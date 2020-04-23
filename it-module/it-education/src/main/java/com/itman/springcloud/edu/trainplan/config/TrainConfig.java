@@ -1,4 +1,4 @@
-package com.itman.springcloud.trainplan.config;
+package com.itman.springcloud.edu.trainplan.config;
 
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,15 +16,16 @@ import org.springframework.web.client.RestTemplate;
 public class TrainConfig
 {
     @Bean
-    public RestTemplate restTemplate(@Qualifier("clientHttpRequestFactory") ClientHttpRequestFactory factory){
+    public RestTemplate restTemplate(@Qualifier("clientHttpRequestFactory") ClientHttpRequestFactory factory)
+    {
         return new RestTemplate(factory);
     }
 
     @Bean
     public ClientHttpRequestFactory clientHttpRequestFactory(){
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-        factory.setConnectTimeout(15000);
-        factory.setReadTimeout(5000);
+        factory.setConnectTimeout(15000);   //设置连接时间
+        factory.setReadTimeout(5000);       //设置超时时间
         return factory;
     }
 }

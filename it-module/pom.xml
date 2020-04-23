@@ -9,12 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>test</artifactId>
+    <artifactId>it-module</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>it-register</module>
+        <module>it-education</module>
     </modules>
     <dependencies>
+        <!--mommon模块-->
+        <dependency>
+            <groupId>com.itman</groupId>
+            <artifactId>it-common-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.3.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

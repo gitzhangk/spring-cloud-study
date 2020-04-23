@@ -1,6 +1,6 @@
-package com.itman.springcloud.worker.service;
+package com.itman.springcloud.reg.worker.service;
 
-import com.itman.springcloud.worker.entity.Worker;
+import com.itman.springcloud.reg.worker.entity.Worker;
 
 public interface WorkerService
 {
